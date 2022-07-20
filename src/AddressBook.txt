@@ -1,0 +1,3 @@
+supali : Contacts { firstName ='supali', lastName ='nath', address ='digboi', city ='dibrugarh', state ='assam', zip =7466475, PhoneNumber =8473774488, email ='jdkdsjdjkkkk'}
+jyoti : Contacts { firstName ='jyoti', lastName ='nath', address ='solung', city ='pasighat', state ='arunachal', zip =791102, PhoneNumber =8974085817, email ='jfskjfdjfdkjfdjk'}
+shubom : Contacts { firstName ='shubom', lastName ='nath', address ='solung', city ='pasighat', state ='arunachal', zip =791102, PhoneNumber =8288894252, email ='jskjfkkhsfksjs'}
