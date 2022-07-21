@@ -260,7 +260,7 @@ public class AddInfo implements AddInfoIF {
             System.out.println(iterator.next());
         }
     }
-    public void writeData() {
+    public void writeDataInText() {
         File file = new File("C:\\Users\\Lenovo\\IdeaProjects\\AddressBookGradle\\src\\AddressBook.txt");
         BufferedWriter bufferedWriter=null;
         try {
@@ -280,12 +280,38 @@ public class AddInfo implements AddInfoIF {
             }
         }
     }
+    public void writeDataInCSV(){
+        File file = new File("C:\\Users\\Lenovo\\IdeaProjects\\AddressBookGradle\\src\\main\\resources\\AddressBook.csv");
+        BufferedWriter bufferedWriter=null;
+        try {
+            bufferedWriter=new BufferedWriter(new FileWriter(file));
+            for(Map.Entry<String, AddInfo> entryStream1:addressBookDictionary.entrySet()){
+                bufferedWriter.write(entryStream1.getKey()+ " : "+entryStream1.getValue());
+                bufferedWriter.newLine();
+                bufferedWriter.flush();
+                for(Map.Entry<String, AddressBook> entryStream:addressBookHashMap.entrySet()){
+                    bufferedWriter.write(entryStream.getKey()+ " : "+entryStream.getValue());
+                    bufferedWriter.newLine();
+                    bufferedWriter.flush();
+                }
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }finally {
+            try {
+                bufferedWriter.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
     public void operationDictionary() {
 //        call every method related to address book dictionary to perform multiple operations in the address books.
         boolean changes = true;
         do {
             System.out.println("\nChoose the operation you want to perform");
-            System.out.println("1.Add Address Book\n2.Edit Entry of Existing address book\n3.Display Contact\n4.Search content in addressbook\n5.Sort address book by name\n6.Write data to file\n7.Exit Address book System");
+            System.out.println("1.Add Address Book\n2.Edit Entry of Existing address book\n3.Display Contact\n4.Search content in addressbook\n5.Sort address book by name\n6.Write data to text file\n7.Write data to CSV file\n8.Exit Address book System");
             switch (scanner.nextInt()) {
                 case 1:
                     addAddressBook();
@@ -306,9 +332,12 @@ public class AddInfo implements AddInfoIF {
                     sortAddressBook();
                     break;
                 case 6:
-                    writeData();
+                    writeDataInText();
                     break;
                 case 7:
+                    writeDataInCSV();
+                    break;
+                case 8:
                     changes = false;
                     System.out.println("We are exiting");
             }

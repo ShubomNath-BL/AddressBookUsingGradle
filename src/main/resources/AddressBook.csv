@@ -1,0 +1,8 @@
+book1 : com.addressbook.AddInfo@3498ed
+supali : Contacts { firstName ='supali', lastName ='nath', address ='station', city ='digboi', state ='assam', zip =212334, PhoneNumber =8273827373, email ='jdakdjdskksksa'}
+jyoti : Contacts { firstName ='jyoti', lastName ='nath', address ='sector-12', city ='noida', state ='UP', zip =201301, PhoneNumber =8387484832, email ='jdjskskakajjssdd'}
+shubom : Contacts { firstName ='shubom', lastName ='nath', address ='solung', city ='pasighat', state ='arunachal', zip =791102, PhoneNumber =8288894252, email ='kjdjdjdskjdskj'}
+book : com.addressbook.AddInfo@13a57a3b
+supali : Contacts { firstName ='supali', lastName ='nath', address ='station', city ='digboi', state ='assam', zip =212334, PhoneNumber =8273827373, email ='jdakdjdskksksa'}
+jyoti : Contacts { firstName ='jyoti', lastName ='nath', address ='sector-12', city ='noida', state ='UP', zip =201301, PhoneNumber =8387484832, email ='jdjskskakajjssdd'}
+shubom : Contacts { firstName ='shubom', lastName ='nath', address ='solung', city ='pasighat', state ='arunachal', zip =791102, PhoneNumber =8288894252, email ='kjdjdjdskjdskj'}
